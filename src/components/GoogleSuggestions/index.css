@@ -1,0 +1,39 @@
+/* Write your CSS here */
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  padding: 10px;
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  border-radius: 12px;
+  min-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  height: 70px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+.input-element {
+  display: flex;
+  flex-direction: row;
+}
+.search-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.input-element {
+  outline: none;
+  border: none;
+  font-family: 'Roboto';
+  width: 600px;
+}
