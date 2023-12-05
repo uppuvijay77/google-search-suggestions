@@ -5,23 +5,26 @@ import SuggestionItem from '../SuggestionItem/index'
 import './index.css'
 
 class GoogleSuggestions extends Component {
-  state = {searchInput: '', suggestionList: suggestionsList}
+  state = {searchInput: ''}
 
   onChanging = event => {
     this.setState({searchInput: event.target.value})
   }
 
   updateSuggestion = id => {
-    const {suggestionList} = this.state
-    const filterSuggestionsList = suggestionList.filter(each => each.id === id)
-    this.setState({suggestionList: filterSuggestionsList})
+    const {suggestionList} = this.props
+    const filteredResult = suggestionList.filter(each => each.id === id)
+    this.setState({searchInput: filteredResult})
   }
+
   render() {
     const {suggestionsList} = this.props
     const {searchInput} = this.state
-    console.log(suggestionsList)
+
     const searchResult = suggestionsList.filter(eachSuggestion =>
-      eachSuggestion.suggestion.toLowerCase().includes(searchInput),
+      eachSuggestion.suggestion
+        .toLowerCase()
+        .includes(searchInput.toLowerCase()),
     )
 
     return (

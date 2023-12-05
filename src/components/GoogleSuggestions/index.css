@@ -10,7 +10,7 @@
   padding: 10px;
   box-shadow: 0px 4px 16px 0px #bfbfbf;
   border-radius: 12px;
-  min-width: 600px;
+  min-width: 500px;
 
   display: flex;
   flex-direction: column;
@@ -35,5 +35,5 @@
   outline: none;
   border: none;
   font-family: 'Roboto';
-  width: 600px;
+  width: 500px;
 }
